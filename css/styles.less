@@ -1,0 +1,378 @@
+html {
+   box-sizing: border-box;
+   font-size: 100%;
+   overflow-x: hidden;
+   overflow-y: visible;
+}
+.display-flex-row() {
+   display: flex;
+   flex-direction: row;
+}
+
+.display-flex-column() {
+   display: flex;
+   flex-direction: column;
+}
+
+body {
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   .display-flex-column();
+   justify-content: center;
+
+   & a {
+      font-size: 0.55rem;
+   }
+
+   & h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+   }
+
+   & p {
+      font-size: 0.7rem;
+   }
+
+   & button {
+      background-color: rgb(255, 0, 0);
+      color: rgb(255, 255, 255);
+      font-size: 0.5rem;
+      font-weight: 600;
+      padding: 8px 5px;
+      border: none;
+      width: 95px;
+      &:hover {
+         cursor: pointer;
+         background-color: #243238;
+      }
+   }
+}
+
+.header {
+   .display-flex-column();
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   width: 100vw;
+   height: 110vh;
+   background-image: url(https://ld-wp.template-help.com/wordpress_prod-15282/v1/wp-content/uploads/2017/02/main-slider-img-1.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   .nav-bar {
+      .display-flex-row();
+      justify-content: space-around;
+      width: 100%;
+      padding: 35px 0;
+      .logo {
+         width: 10vw;
+         height: 2vw;
+         img {
+            width: 90.5px;
+            height: 27.5px;
+         }
+      }
+      .nav-menu {
+         .display-flex-row();
+         width: auto;
+         height: 50px;
+         .nav-btns {
+            padding: 15px;
+            a {
+               text-decoration: none;
+               color: rgb(243, 242, 242);
+            }
+         }
+      }
+   }
+
+   .header-inner {
+      float: left;
+      width: 50vw;
+      margin-top: 10%;
+      margin-left: 15%;
+      position: relative;
+
+      & p {
+         color: rgb(250, 250, 250);
+         width: 38vw;
+         font-size: 0.95rem;
+      }
+
+      & h1 {
+         margin: auto;
+         color: rgb(255, 255, 255);
+         font-size: 3rem;
+      }
+
+      &::before {
+         content: "";
+         position: absolute;
+         background-color: rgb(250, 0, 0);
+         width: 30px;
+         height: 2px;
+         top: -15px;
+      }
+   }
+
+   .header-dots {
+      .display-flex-row();
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      position: relative;
+      height: 10vh;
+      margin: 7% 0;
+
+      .dot {
+         background-color: rgb(255, 254, 254);
+         width: 6px;
+         height: 6px;
+         border-radius: 50%;
+         position: relative;
+         margin-top: 6%;
+
+         &:hover {
+            background-color: #ff0000;
+            cursor: pointer;
+         }
+
+         &::before {
+            content: "";
+            position: absolute;
+            background-color: rgb(255, 254, 254);
+            left: -2vw;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+         }
+
+         &::after {
+            content: "";
+            position: absolute;
+            background-color: rgb(255, 254, 254);
+            left: 2vw;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+         }
+      }
+
+      .dot:hover::after {
+         background-color: #ff0000;
+         cursor: pointer;
+      }
+      .dot:hover::before {
+         background-color: #ff0000;
+         cursor: pointer;
+      }
+   }
+}
+
+.container {
+   .display-flex-row();
+   width: 100vw;
+
+   .classes {
+      .display-flex-row();
+      justify-content: center;
+      background-image: url(https://ld-wp.template-help.com/wordpress_prod-15282/v1/wp-content/uploads/2017/02/home-fullwidth-img1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+
+      .classes-image {
+         max-width: 350px;
+         width: 350px;
+         max-height: 310px;
+         margin: 2% 0 0 0;
+
+         img {
+            max-width: 350px;
+            height: 310px;
+         }
+      }
+
+      .classes-text {
+         margin: 10% 0 0 0;
+         position: relative;
+         &::before {
+            content: "";
+            position: absolute;
+            background-color: #ff0000;
+            width: 30px;
+            height: 2px;
+            top: -2vh;
+         }
+
+         p {
+            color: rgb(253, 253, 253);
+            width: 350px;
+         }
+
+         h1 {
+            color: rgb(255, 255, 255);
+            font-size: 2.5rem;
+            width: 350px;
+            margin: 1% 0;
+         }
+      }
+   }
+
+   .list-courses {
+      .display-flex-column();
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      position: relative;
+      margin: 9% 0;
+
+      &::before {
+         content: "";
+         position: absolute;
+         background-color: rgb(250, 45, 45);
+         width: 30px;
+         height: 2px;
+         left: 48%;
+         top: 1%;
+      }
+
+      h1 {
+         color: rgba(53, 52, 52, 0.76);
+         font-size: 1.5rem;
+         margin: 3% 0;
+         width: 100%;
+         text-align: center;
+         font-weight: 900;
+      }
+
+      .course-table {
+         .display-flex-row();
+         justify-content: space-evenly;
+         flex-wrap: wrap;
+         .courses {
+            .display-flex-column();
+            justify-content: center;
+            align-items: center;
+            flex: 2;
+            img {
+               width: 210px;
+               height: 150px;
+            }
+
+            h2 {
+               font-size: 0.8rem;
+            }
+
+            p {
+               color: rgba(53, 52, 52, 0.76);
+               font-size: 0.7rem;
+               strong {
+                  font-weight: 900;
+               }
+            }
+         }
+
+         .coaches {
+            .display-flex-column();
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            flex: 1;
+            img {
+               width: 180px;
+               height: 210px;
+               &:hover {
+                  filter: grayscale(100%);
+                  cursor: pointer;
+               }
+            }
+            h2 {
+               font-size: 0.6rem;
+            }
+            .teacher {
+               position: relative;
+               font-size: 0.6rem;
+               font-family: "Times New Roman", Times, serif;
+               top: -15px;
+            }
+            p {
+               color: rgba(53, 52, 52, 0.76);
+               font-size: 0.6rem;
+               text-align: center;
+
+               strong {
+                  font-weight: 900;
+               }
+            }
+         }
+      }
+   }
+
+   .first-lesson {
+      background-image: url(https://ld-wp.template-help.com/wordpress_prod-15282/v1/wp-content/uploads/2017/02/home-fullwidth-img2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 60vh;
+      .display-flex-column();
+      justify-content: center;
+
+      .first-lesson-inner {
+         width: 500px;
+         margin: auto;
+         .display-flex-column();
+         justify-content: center;
+         align-items: center;
+         position: relative;
+
+         &::before {
+            content: "";
+            position: absolute;
+            background-color: rgb(250, 45, 45);
+            width: 30px;
+            height: 2px;
+            left: 48%;
+            top: -1%;
+         }
+
+         h1 {
+            color: rgb(255, 255, 255);
+            font-size: 2.5rem;
+            width: 350px;
+            margin: 1% 0;
+            text-align: center;
+         }
+         p {
+            color: rgb(250, 250, 250);
+            width: 30vw;
+            font-size: 0.95rem;
+            text-align: center;
+         }
+      }
+   }
+
+   .exam {
+      background-image: url(https://ld-wp.template-help.com/wordpress_prod-15282/v1/wp-content/uploads/2017/02/home-fullwidth-img3.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 10px;
+
+      .classes-text {
+         p {
+            color: rgb(116, 110, 110);
+            width: 350px;
+         }
+
+         h1 {
+            color: rgb(12, 12, 12);
+            font-size: 1.8rem;
+            width: 350px;
+            margin: 1% 0;
+         }
+         h2 {
+            font-size: 1.1rem;
+            width: 350px;
+         }
+      }
+   }
+}

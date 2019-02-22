@@ -1,5 +1,5 @@
 document.onscroll = function() {
-   var elements = document.getElementsByClassName("animate-me");
+   var elements = document.getElementsByClassName("img-animate");
 
    var coursetable = document.getElementsByClassName("course-table");
 

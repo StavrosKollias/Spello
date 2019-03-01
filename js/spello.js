@@ -2,8 +2,10 @@ document.onscroll = function() {
    var elements = document.getElementsByClassName("img-animate");
 
    var coursetable = document.getElementsByClassName("course-table");
-
+   var backtopBtn = document.getElementsByClassName("back-to-top");
+   var classesdiv = document.getElementsByClassName("classes");
    var z = coursetable[0];
+   var classes = classesdiv[0];
 
    function isAnyPartOfElementInViewport(el) {
       const rect = el.getBoundingClientRect();
@@ -17,9 +19,14 @@ document.onscroll = function() {
 
       return vertInView && horInView;
    }
-
+   var classesitem = isAnyPartOfElementInViewport(classes);
+   var classesshown = classesitem.vertInView;
    var x = isAnyPartOfElementInViewport(z);
-   var y = x.vertInView;
+   if (classesitem) {
+      backtopBtn[0].classList.add("animation");
+   } else {
+      backtopBtn[0].classList.remove("animation");
+   }
    if (x) {
       for (i = 0; i < elements.length; i++) {
          elements[i].classList.add("visible");

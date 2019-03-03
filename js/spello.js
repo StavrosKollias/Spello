@@ -1,11 +1,13 @@
 document.onscroll = function() {
    var elements = document.getElementsByClassName("img-animate");
 
-   var coursetable = document.getElementsByClassName("course-table");
+   var coursetable = document.getElementsByClassName("courses");
+
+   var body = document.getElementsByClassName("nav-bar");
    var backtopBtn = document.getElementsByClassName("back-to-top");
-   var classesdiv = document.getElementsByClassName("classes");
-   var z = coursetable[0];
-   var classes = classesdiv[0];
+   var containerdiv = document.getElementsByClassName("logo");
+
+   var container = body[0];
 
    function isAnyPartOfElementInViewport(el) {
       const rect = el.getBoundingClientRect();
@@ -19,16 +21,20 @@ document.onscroll = function() {
 
       return vertInView && horInView;
    }
-   var classesitem = isAnyPartOfElementInViewport(classes);
-   var classesshown = classesitem.vertInView;
-   var x = isAnyPartOfElementInViewport(z);
-   if (classesitem) {
+   var containeritem = isAnyPartOfElementInViewport(container);
+   var classesshown = containeritem.vertInView;
+
+   if (!containeritem) {
       backtopBtn[0].classList.add("animation");
    } else {
       backtopBtn[0].classList.remove("animation");
    }
-   if (x) {
-      for (i = 0; i < elements.length; i++) {
+
+   for (i = 0; i < coursetable.length; i++) {
+      var z = coursetable[i];
+      var x = isAnyPartOfElementInViewport(z);
+
+      if (x) {
          elements[i].classList.add("visible");
          // elements[i].classList.add("animation")
          var x = elements[i];

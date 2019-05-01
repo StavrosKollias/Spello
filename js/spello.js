@@ -33,7 +33,6 @@ document.onscroll = function() {
 
       if (x) {
          elements[i].classList.add("visible");
-         // elements[i].classList.add("animation")
          var x = elements[i];
 
          elements[i].classList.add("animation");

@@ -1,2 +1,2 @@
 # Spello
-practise
+practice
